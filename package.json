@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.development",
+    "build": "nuxt build --dotenv .env.production",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "mysql2": "^3.10.2",
     "nuxt": "^3.12.3",
+    "sequelize": "^6.37.3",
     "vue": "latest"
   }
 }
