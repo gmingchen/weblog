@@ -1,18 +1,21 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "nuxt dev --dotenv .env.development",
-    "build": "nuxt build --dotenv .env.production",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "mysql2": "^3.10.2",
-    "nuxt": "^3.12.3",
-    "sequelize": "^6.37.3",
-    "vue": "latest"
-  }
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/icon": "2.0.0",
+    "eslint": "^9.36.0",
+    "nuxt": "^4.1.2",
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1"
+  },
+  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef"
 }
