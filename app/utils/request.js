@@ -16,7 +16,7 @@ export default async function (url, params = {}, options = {}) {
   const headers = {
     ...config.headers,
     ...options?.headers,
-    token: state.value.accessToken || '',
+    token: state.value?.accessToken || '',
   }
   options = {
     ...config,
