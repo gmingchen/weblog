@@ -5,22 +5,24 @@
 </template>
 
 <script setup>
-import { useSetting } from '@/store'
-const n = useNamespace('a')
+const n = useNamespace('home')
 
-const { setting } = useSetting()
-
-const value = ref('')
-
-
-const onChange = (e) => {
-  console.log(e)
-}
-
+const { WEBSIDE_TITLE, WEBSIDE_DESCRIPTION, WEBSIDE_KEYWORDS } = useRuntimeConfig().public
+useHead({
+  title: `首页 - ${WEBSIDE_TITLE}`,
+  meta: [
+    { name: 'description', content: WEBSIDE_DESCRIPTION },
+    { name: 'keywords', content: WEBSIDE_KEYWORDS },
+  ],
+  htmlAttrs: {
+    lang: 'zh-CN',
+  }
+})
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(a) {
+  // cursor: url('~/assets/images/image.png'), auto;
 }
 </style>

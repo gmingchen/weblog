@@ -2,7 +2,7 @@
 // n-button n-button__element n-button__element--disabled
 // is-checked is-actived
 
-export const defaultNamespace = ''
+export const defaultNamespace = 'wb'
 const statePrefix = 'is-'
 
 const _bem = (

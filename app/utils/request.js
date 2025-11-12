@@ -1,3 +1,6 @@
+import { useRuntimeConfig } from 'nuxt/app'
+import { useAuthStore } from '~/store'
+
 const config = {
   timeout: 10000,
   headers: {
@@ -5,9 +8,16 @@ const config = {
   },
 }
 
-export const useRequest = async (url, params = {}, options = {}) => {
+export default async function (url, params = {}, options = {}) {
   const { public: { API_BASE_URL, API_BASE_PATH } } = useRuntimeConfig()
   const { method = 'GET' } = options
+  const state = useAuthStore()
+
+  const headers = {
+    ...config.headers,
+    ...options?.headers,
+    token: state.value.accessToken || '',
+  }
   options = {
     ...config,
     ...options,
@@ -15,6 +25,7 @@ export const useRequest = async (url, params = {}, options = {}) => {
     method,
     params: method === 'GET' ? params : undefined,
     body: method === 'POST' ? params : undefined,
+    headers,
   }
   try {
     const res = await $fetch(url, options)

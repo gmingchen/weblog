@@ -22,7 +22,7 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(header) {
   position: sticky;
   top: 0;

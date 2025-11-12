@@ -14,7 +14,7 @@ const n = useNamespace('layout')
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(layout) {
   --height: 100vh;
   min-height: var(--height);

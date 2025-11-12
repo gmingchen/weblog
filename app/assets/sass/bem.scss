@@ -1,12 +1,11 @@
-$namespace: 'n';
+$namespace: 'wb';
 $element-separator: '__';
 $modifier-separator: '--';
 $state-prefix: 'is-';
 
 // n-[button]
 @mixin b($block) {
-  // $B: $namespace + '-' + $block;
-  $B: $block;
+  $B: $namespace + '-' + $block;
   .#{$B} {
     @content;
   }

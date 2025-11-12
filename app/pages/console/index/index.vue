@@ -7,7 +7,7 @@ const n = useNamespace('b')
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(b) {
 }
 </style>

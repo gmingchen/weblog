@@ -1,6 +1,6 @@
 <template>
   <div :class="n.b()">
-    首页    <Icon name="i-costom-bug" />
+    首页
     <NuxtPage />
   </div>
 </template>
@@ -10,7 +10,7 @@ const n = useNamespace('index')
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(index) {
 }
 </style>

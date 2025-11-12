@@ -2,4 +2,4 @@
  * 获取心情列表
  * @returns {Promise}
  */
-export const moodListApi = () => useRequest('/mood/pass/list')
+export const moodListApi = () => request('/mood/pass/list')

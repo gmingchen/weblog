@@ -1,14 +1,14 @@
-export const useSetting = () => {
-  const setting = useState('setting', () => ({
+export const useSettingStore = () => {
+  const state = useState('setting', () => ({
     qq: null,
   }))
 
-  const setSetting = (value) => {
-    setting.value = value
+  const setState = (value) => {
+    state.value = value
   }
 
   return {
-    setting,
-    setSetting
+    state,
+    setState,
   }
 }

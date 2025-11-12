@@ -7,7 +7,7 @@ const n = useNamespace('footer')
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/sass/bem.scss' as *;
+@use '~/assets/sass/bem.scss' as *;
 @include b(footer) {
   height: var(--footer-height);
 }
