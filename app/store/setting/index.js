@@ -1,6 +1,7 @@
 export const useSettingStore = () => {
   const state = useState('setting', () => ({
-    qq: null,
+    qqSetting: null,
+    websiteSetting: null,
   }))
 
   const setState = (value) => {

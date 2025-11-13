@@ -6,11 +6,11 @@
 </template>
 
 <script setup>
-const n = useNamespace('index')
+const n = useNamespace('client')
 </script>
 
 <style lang="scss" scoped>
 @use '~/assets/sass/bem.scss' as *;
-@include b(index) {
+@include b(client) {
 }
 </style>

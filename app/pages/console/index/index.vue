@@ -1,13 +1,13 @@
 <template>
-  <div :class="n.b()">b</div>
+  <div :class="n.b()">home</div>
 </template>
 
 <script setup>
-const n = useNamespace('b')
+const n = useNamespace('home')
 </script>
 
 <style lang="scss" scoped>
 @use '~/assets/sass/bem.scss' as *;
-@include b(b) {
+@include b(home) {
 }
 </style>

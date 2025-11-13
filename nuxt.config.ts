@@ -1,18 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const { 
-  API_BASE_URL, API_BASE_PATH, 
-  WEBSIDE_TITLE, WEBSIDE_DESCRIPTION, WEBSIDE_KEYWORDS
+  API_BASE_URL, API_BASE_PATH,
 } = process.env
 
 export default defineNuxtConfig({
   app: {
     baseURL: '/',
     head: {
-      title: WEBSIDE_TITLE,
-      meta: [
-        { name: 'description', content: WEBSIDE_DESCRIPTION },
-        { name: 'keywords', content: WEBSIDE_KEYWORDS },
-      ],
       htmlAttrs: {
         lang: 'zh-CN',
       }
@@ -22,9 +16,6 @@ export default defineNuxtConfig({
     public: {
       API_BASE_URL: API_BASE_URL,
       API_BASE_PATH: API_BASE_PATH,
-      WEBSIDE_TITLE: WEBSIDE_TITLE,
-      WEBSIDE_DESCRIPTION: WEBSIDE_DESCRIPTION,
-      WEBSIDE_KEYWORDS: WEBSIDE_KEYWORDS,
     }
   },
   compatibilityDate: '2025-07-15',

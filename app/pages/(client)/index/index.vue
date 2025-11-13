@@ -5,18 +5,11 @@
 </template>
 
 <script setup>
+import { useSettingStore } from '~/store'
 const n = useNamespace('home')
-
-const { WEBSIDE_TITLE, WEBSIDE_DESCRIPTION, WEBSIDE_KEYWORDS } = useRuntimeConfig().public
+const { state } = useSettingStore()
 useHead({
-  title: `首页 - ${WEBSIDE_TITLE}`,
-  meta: [
-    { name: 'description', content: WEBSIDE_DESCRIPTION },
-    { name: 'keywords', content: WEBSIDE_KEYWORDS },
-  ],
-  htmlAttrs: {
-    lang: 'zh-CN',
-  }
+  title: `首页 - ${state.value.websiteSetting?.title}`,
 })
 </script>
 
