@@ -1,6 +1,6 @@
 <template>
   <div :class="n.b()">
-    index
+    <Avatar size="500px" />
   </div>
 </template>
 

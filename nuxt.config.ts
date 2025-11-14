@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxt/ui'],
+  modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxt/ui', '@nuxt/image'],
   css: ['~/assets/sass/index.scss', '~/assets/css/ui.css'],
   ssr: true,
   icon: {
