@@ -16,7 +16,7 @@ const props = defineProps({
   },
   size: {
     type: String,
-    default: () => '100px',
+    default: () => '',
   },
 })
 
@@ -31,7 +31,7 @@ $prefix: #{$namespace}-avatar#{$element-separator};
 
 @include b(avatar) {
   --size: ;
-  --space: 50px;
+  --space: 100px;
   --border-width: calc(var(--size) / 100);
 
   width: var(--size);
@@ -68,6 +68,8 @@ $prefix: #{$namespace}-avatar#{$element-separator};
     }
   }
   @include e(image) {
+    width: var(--size);
+    height: var(--size);
     position: relative;
     z-index: 1;
     transition: all 0.5s;

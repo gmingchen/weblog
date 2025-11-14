@@ -1,6 +1,6 @@
 <template>
   <div :class="n.b()">
-    <Avatar size="500px" />
+    <Avatar size="" />
   </div>
 </template>
 
