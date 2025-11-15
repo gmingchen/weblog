@@ -1,6 +1,6 @@
 <template>
   <div :class="n.b()">
-    首页
+    client
     <NuxtPage />
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div :class="n.b()">
-    <Avatar size="" />
+    home
+    <Loading />
   </div>
 </template>
 
