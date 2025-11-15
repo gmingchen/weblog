@@ -16,7 +16,6 @@ useHead({
 
 <style lang="scss" scoped>
 @use '~/assets/sass/bem.scss' as *;
-@include b(a) {
-  // cursor: url('~/assets/images/image.png'), auto;
+@include b(home) {
 }
 </style>
