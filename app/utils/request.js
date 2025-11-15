@@ -1,4 +1,3 @@
-import { useRuntimeConfig } from 'nuxt/app'
 import { useAuthStore } from '~/store'
 
 const config = {
@@ -9,7 +8,7 @@ const config = {
 }
 
 export default async function (url, params = {}, options = {}) {
-  const { public: { API_BASE_URL, API_BASE_PATH } } = useRuntimeConfig()
+  const { API_BASE_URL, API_BASE_PATH } = useAppConfig()
   const { method = 'GET' } = options
   const state = useAuthStore()
 

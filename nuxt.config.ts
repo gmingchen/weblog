@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const { 
-  API_BASE_URL, API_BASE_PATH,
-} = process.env
 
 export default defineNuxtConfig({
   app: {
@@ -11,12 +8,6 @@ export default defineNuxtConfig({
         lang: 'zh-CN',
       }
     },
-  },
-  runtimeConfig: {
-    public: {
-      API_BASE_URL: API_BASE_URL,
-      API_BASE_PATH: API_BASE_PATH,
-    }
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
