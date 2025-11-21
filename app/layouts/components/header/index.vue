@@ -1,9 +1,27 @@
 <template>
-  <div :class="[n.b(), n.is('hide', hide)]">header</div>
+  <div :class="[n.b(), n.is('hide', hide)]">
+    <NuxtLink
+      v-for="menu in menus"
+      :key="menu.path"
+      :to="menu.path"
+      :title="menu.name">
+      {{ menu.name }}
+    </NuxtLink>
+  </div>
 </template>
 
 <script setup>
 const n = useNamespace('header')
+
+const menus = [
+  { name: '首页', path: '/' },
+  { name: '文章', path: '/article' },
+  { name: '日记', path: '/diary' },
+  { name: '留言板', path: '/message' },
+  { name: '时间线', path: '/timeline' },
+  { name: '关于我', path: '/about' },
+  { name: '控制台', path: '/console' },
+]
 
 const hide = ref(false)
 

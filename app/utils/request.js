@@ -10,12 +10,12 @@ const config = {
 export default async function (url, params = {}, options = {}) {
   const { API_BASE_URL, API_BASE_PATH } = useAppConfig()
   const { method = 'GET' } = options
-  const state = useAuthStore()
+  const { state } = useAuthStore()
 
   const headers = {
     ...config.headers,
     ...options?.headers,
-    token: state.value?.accessToken || '',
+    token: state.value.token.accessToken || '',
   }
   options = {
     ...config,

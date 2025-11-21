@@ -1,8 +1,6 @@
 <template>
   <UApp>
     <div :class="n.b()">
-      <NuxtLink to="/">首页</NuxtLink>
-      <NuxtLink to="/console">控制台</NuxtLink>
       <NuxtLayout name="default">
         <NuxtPage />
       </NuxtLayout>
@@ -11,26 +9,32 @@
 </template>
 
 <script setup>
-import { useSettingStore } from '~/store'
+import { useSettingStore, useAuthStore } from '~/store'
 import { settingInfosApi } from '~/apis'
 const n = useNamespace('app');
 
-const { state, setState } = useSettingStore()
-
+const { state: settingState, setState: setSettingState } = useSettingStore()
 const getSetting = async () => {
   const r = await useAsyncData('settingInfosApi', settingInfosApi)
   const { data } = r.data.value
-  setState(data)
+  setSettingState(data)
 };
 await getSetting();
 
-const { websiteSetting } = state.value
+const { websiteSetting } = settingState.value
 useHead({
   title: websiteSetting?.title,
   meta: [
     { name: 'description', content: websiteSetting?.description },
     { name: 'keywords', content: websiteSetting?.keywords },
   ],
+})
+
+const { getUser, validateToken } = useAuthStore()
+onMounted(() => {
+  if (validateToken()) {
+    getUser()
+  }
 })
 </script>
 

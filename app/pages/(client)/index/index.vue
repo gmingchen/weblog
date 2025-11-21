@@ -1,7 +1,6 @@
 <template>
   <div :class="n.b()">
-    home
-    <Loading />
+    <Loading :class="n.e('loading')" />
   </div>
 </template>
 
@@ -17,5 +16,8 @@ useHead({
 <style lang="scss" scoped>
 @use '~/assets/sass/bem.scss' as *;
 @include b(home) {
+  @include e(loading) {
+    margin: 0 auto;
+  }
 }
 </style>

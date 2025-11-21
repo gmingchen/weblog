@@ -1,6 +1,5 @@
 <template>
   <div :class="n.b()">
-    client
     <NuxtPage />
   </div>
 </template>

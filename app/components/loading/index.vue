@@ -13,5 +13,6 @@ const n = useNamespace('loading')
 @use '@/assets/sass/bem.scss' as *;
 $prefix: #{$namespace}loading#{$element-separator};
 @include b(loading) {
+  width: fit-content;
 }
 </style>

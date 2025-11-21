@@ -6,6 +6,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: ['author'],
+})
+
 const n = useNamespace('console')
 </script>
 

@@ -24,7 +24,7 @@ export default defineNuxtPlugin({
   name: 'local-state',
   hooks: {
     'app:beforeMount': () => {
-      handleSet()
+      // handleSet()
       handleGet()
     },
   }
