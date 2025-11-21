@@ -3,7 +3,7 @@
  * @returns {Promise}
  */
 export const fileUploadApi = (file) =>
-  useRequest(
+  request(
     '/file/upload',
     { file },
     {
